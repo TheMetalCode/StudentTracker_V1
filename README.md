@@ -19,13 +19,16 @@ This repository also contains the executable JAR file, along with all the necess
 
 1.) Clone this git repository to your local machine.
 
-2.) Install MySQL 5.1 for OSX. Be sure to include the Start Package and the preferences pane. http://dev.mysql.com/downloads/mysql/5.1.html#macosx-dmg 
+2.) Install MySQL 5.1 for OSX. Be sure to include the Start Package and the preferences pane. 
+
+http://dev.mysql.com/downloads/mysql/5.1.html#macosx-dmg 
 
 When the installation is complete, open up MySQL in System Preferences and start your local server.
 
 3.) Add the following lines to your /users/[username]/.bash_profile or /users/[username]/.profile, whichever one exists:
 
 alias mysql=/usr/local/mysql/bin/mysql
+
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
 4.) Open up a Terminal, cd to [local clone of StudentTracker_V1]/db, and run MySQL. Note that sudo will prompt you for your local administrator password: 
@@ -39,6 +42,7 @@ create schema registrar;
 6.) Grant permissions to 'user1' on your MySQL server:
 
 use registrar;
+
 GRANT ALL ON registrar TO 'user1'@'localhost' IDENTIFIED BY 'user1';
 
 This allows the StudentTracker executable to access the local database.
